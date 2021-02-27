@@ -2,6 +2,7 @@
 const inquirer = require(`inquirer`)
 const fs = require(`fs`)
 const util = require('util')
+// make our markdown function available on this page so it requires everything set in my index.js and plays nicely with its other const friends
 const generateMarkdown = require(`./utils/generateMarkdown`)
 // create writeFile function using promises instead of a callback function
 const writeFileAsync = util.promisify(fs.writeFile)
@@ -84,9 +85,10 @@ const questions = [];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {
+// Created a function to initialize app using async await
+async function init() {
   const userInput = await promptUser();
+  const generateReadMe = generateMarkdown(userInput)
 }
 
 // Function call to initialize app
