@@ -1,10 +1,13 @@
-// TODO: Include packages needed for this application
+//Included packages needed for this application
 const inquirer = require(`inquirer`)
 const fs = require(`fs`)
 const util = require('util')
+
 // make our markdown function available on this page so it requires everything set in my index.js and plays nicely with its other const friends
 const generateMarkdown = require(`./utils/generateMarkdown`)
-// create writeFile function using promises instead of a callback function
+
+// create writeFile function using promises instead of a callback function(util.promisfy)
+// writeFile instead of write so it keeps trying until all of data is written or an error occurs
 const writeFileAsync = util.promisify(fs.writeFile)
 
 
@@ -87,7 +90,9 @@ function writeToFile(fileName, data) {}
 
 // Created a function to initialize app using async await
 async function init() {
+  // once promptUser finishes running, that data is sent to const userInput
   const userInput = await promptUser();
+  // now that we have our data we can use it as a parameter in our gmd function
   const generateReadMe = generateMarkdown(userInput)
 }
 
