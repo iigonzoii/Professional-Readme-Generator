@@ -3,9 +3,13 @@ const inquirer = require(`inquirer`)
 const fs = require(`fs`)
 const util = require('util')
 
+// create writeFile function using promises instead of a callback function
+// const writeFileAsync = util.promisify(fs.writeFile)
 
-const promptUser = () => {
-    return inquirer.prompt([
+
+// const promptUser = () => {
+//     return 
+    inquirer.prompt([
       {
         type: 'input',
         name: 'title',
@@ -20,6 +24,7 @@ const promptUser = () => {
         type: 'input',
         name: 'table',
         message: 'table of contents placeholder, will return here',
+        // take this out and create a table using markdown when you generate dynamically
       },
       {
         type: 'input',
@@ -59,18 +64,23 @@ const promptUser = () => {
       },
       {
         type: 'input',
+        name: 'questions',
+        message: 'what do I do if I need assistance?',
+      },
+      {
+        type: 'input',
         name: 'github',
         message: 'Enter your GitHub Username',
       },
       {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: 'Enter you email address here please.',
       },
     ]);
-  };
+  // };
 
-// ****// const writeFileAsync = util.promisify(fs.writeFile);*****
+
 
 
 
