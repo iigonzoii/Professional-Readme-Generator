@@ -22,12 +22,6 @@ const util = require('util')
       },
       {
         type: 'input',
-        name: 'table',
-        message: 'table of contents placeholder, will return here',
-        // take this out and create a table using markdown when you generate dynamically
-      },
-      {
-        type: 'input',
         name: 'install',
         message: 'What is the installation process?',
       },
@@ -77,7 +71,9 @@ const util = require('util')
         name: 'email',
         message: 'Enter you email address here please.',
       },
-    ]);
+    ]).then(function(answers){
+
+    })
   // };
 
 
