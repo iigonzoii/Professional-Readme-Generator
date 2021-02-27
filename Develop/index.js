@@ -4,11 +4,11 @@ const fs = require(`fs`)
 const util = require('util')
 
 // create writeFile function using promises instead of a callback function
-// const writeFileAsync = util.promisify(fs.writeFile)
+const writeFileAsync = util.promisify(fs.writeFile)
 
 
-// const promptUser = () => {
-//     return 
+const promptUser = () => {
+    return 
     inquirer.prompt([
       {
         type: 'input',
@@ -71,10 +71,8 @@ const util = require('util')
         name: 'email',
         message: 'Enter you email address here please.',
       },
-    ]).then(function(answers){
-
-    })
-  // };
+    ]);
+  }
 
 
 
@@ -87,7 +85,9 @@ const questions = [];
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  const userInput = await promptUser();
+}
 
 // Function call to initialize app
 init();
