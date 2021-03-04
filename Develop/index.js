@@ -78,22 +78,18 @@ const promptUser = () => {
     ]);
   }
 
-
-
-
-
-// TODO: Create an array of questions for user input
-const questions = [];
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+  
 // Created a function to initialize app using async await
 async function init() {
+
   // once promptUser finishes running, that data is sent to const userInput
   const userInput = await promptUser();
+
   // now that we have our data we can use it as a parameter in our gmd function
   const generateReadMe = generateMarkdown(userInput)
+
+  // here we will write the readme to the specified spot in our file structure
+  await writeFileAsync(`where am i going? am i creating a file or do i make a folder first then assign this writefile to that folder?`, generateReadMe)
 }
 
 // Function call to initialize app
