@@ -11,9 +11,8 @@ const generateMarkdown = require(`./utils/generateMarkdown`)
 const writeFileAsync = util.promisify(fs.writeFile)
 
 
-const promptUser = () => {
-    return 
-    inquirer.prompt([
+function promptUser(){
+    return inquirer.prompt([
       {
         type: 'input',
         name: 'description',
@@ -74,8 +73,9 @@ const promptUser = () => {
   }
 
   
-// Created a function to initialize app using async await
+// Created a function to initialize app using async await function 
 async function init() {
+  try{
 
   // once promptUser finishes running, that data is sent to const userInput
   const userInput = await promptUser();
@@ -83,8 +83,13 @@ async function init() {
   // now that we have our data we can use it as a parameter in our gmd function
   const generateReadMe = generateMarkdown(userInput)
 
-  // here we will write the readme to the specified spot in our file structure
-  await writeFileAsync(`where am i going? am i creating a file or do i make a folder first then assign this writefile to that folder?`, generateReadMe)
+  // here we will write the readme to the specified spot in our file structure using the stored variable from above on line 11
+  await writeFileAsync(`./sample/README.md`, generateReadMe)
+  // adding the try and catch because i cant execute the block of code without doing so. im choosing to leave out the finally block because it doesnt seem necessary so long that catch is involved
+  console.log(`Big success :)`)
+  } catch(err){
+    console.log(err)
+  }
 }
 
 // Function call to initialize app
