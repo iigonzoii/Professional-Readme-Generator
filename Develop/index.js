@@ -16,28 +16,23 @@ const promptUser = () => {
     inquirer.prompt([
       {
         type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
-      },
-      {
-        type: 'input',
         name: 'description',
         message: 'please enter a description of your project',
       },
       {
         type: 'input',
-        name: 'install',
+        name: 'title',
+        message: 'What is the title of your project?',
+      },
+      {
+        type: 'input',
+        name: 'installation',
         message: 'What is the installation process?',
       },
       {
         type: 'input',
         name: 'usage',
         message: 'What is the usuage of this project?',
-      },
-      {
-        type: 'input',
-        name: 'install',
-        message: 'What is the installation process?',
       },
       {
         type: 'list',
