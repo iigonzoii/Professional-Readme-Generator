@@ -43,3 +43,7 @@
   You can find me on GitHub at [iigonzoii](https://github.com/iigonzoii)
 
   Email me if you run into any questions at a.gonzalez418@gmail.com
+ 
+ 
+ <a href="https://drive.google.com/file/d/1hl3xfyHPbU0A2koZYvFwtH2CVVGHZXba/view?usp=sharing" target="_blank">heres a walkthrough of the application if you need further review!</a>
+ 
