@@ -18,7 +18,7 @@ function generateMarkdown(userInput) {
   ${userInput.description}
 
   ## Installation
-  ${userInput.install}
+  ${userInput.installation}
 
   ## Usage
   ${userInput.usage}

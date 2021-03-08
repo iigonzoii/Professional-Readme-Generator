@@ -1,4 +1,4 @@
-# Professional-Readme-Generator
+# Professional Readme Generator
 
   ![badge](https://img.shields.io/badge/license-MIT-blue)
 
@@ -15,16 +15,10 @@
   Command line application using Node.js to generate a README file
 
   ## Installation
-  npm init
   npm install inquirer
 
   ## Usage
-  * create a folder in your file structure at the root titled sample
-  * open your terminal
-  * go into your file that you wish to make a readme for
-  * type in node then (file name) in this case its index
-  * answer the questions that you are prompted with
-  * once done you will see a readme generated in the sample folder
+  University of Denver Coding Bootcamp assignment
 
   ## License
   ![badge](https://img.shields.io/badge/license-MIT-blue)
@@ -43,3 +37,6 @@
   You can find me on GitHub at [iigonzoii](https://github.com/iigonzoii)
 
   Email me if you run into any questions at a.gonzalez418@gmail.com
+
+
+
