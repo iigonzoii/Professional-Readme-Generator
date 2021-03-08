@@ -84,7 +84,7 @@ async function init() {
   const generateReadMe = generateMarkdown(userInput)
 
   // here we will write the readme to the specified spot in our file structure using the stored variable from above on line 11
-  await writeFileAsync('README.md', generateReadMe)
+  await writeFileAsync('../sample/README.md', generateReadMe)
   // adding the try and catch because i cant execute the block of code without doing so. im choosing to leave out the finally block because it doesnt seem necessary so long that catch is involved
   console.log(`Big success :)`)
   } catch(err){
